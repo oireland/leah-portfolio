@@ -434,16 +434,58 @@
         margin-bottom: 1.5rem; 
       }
 
+      /* --- MOBILE REORDERING MECHANISM --- */
       .project-row {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0;
         margin-bottom: 5rem;
       }
 
+      .project-left-col, 
+      .project-right-col, 
       .project-header-line {
-        flex-direction: column;
-        gap: 0.2rem;
+        display: contents;
+      }
+
+      .project-title {
+        order: 1;
+        font-size: 1.8rem;
+        font-weight: 800;
+        line-height: 1.2;
         margin-bottom: 1rem;
+        text-align: left;
+        width: 100%;
+      }
+
+      .slideshow-container {
+        order: 2;
+        margin-bottom: 1rem;
+      }
+
+      .project-category {
+        order: 3;
+        font-size: 0.95rem;
+        margin-top: 0.25rem;
+        margin-bottom: 0.25rem;
+        text-align: left;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+
+      .project-date {
+        order: 4;
+        font-size: 0.95rem;
+        color: #666;
+        margin-bottom: 1.25rem;
+        font-weight: 500;
+        text-align: left;
+      }
+
+      .project-description {
+        order: 5;
+        text-align: left;
       }
     }
   </style>
@@ -454,7 +496,7 @@
   <header>
     <div class="header-brand">
       <a href="#">
-        <img src="portfolio-images/leah-icon.JPG" alt="" class="header-avatar">
+        <img src="portfolio-images/leah-icon.jpg" alt="" class="header-avatar">
         Leah Atkinson
       </a>
     </div>
@@ -517,17 +559,26 @@
         
         <div class="slideshow-container">
           <div class="slides-wrapper">
-            <img src="portfolio-images/final-year/Screenshot-2026-07-04-190339.png" alt="Canopies of the City panoramic project layer">
+            <!-- 4 -->
+            <img src="portfolio-images/final-year/final-year-section.jpeg" alt="Spatial elevation rendering layer">
+            <!-- 2 -->
             <img src="portfolio-images/final-year/Screenshot-2026-07-04-164726.png" alt="Final year master plan drafting file">
-            <img src="portfolio-images/final-year/IMG_2275.JPEG" alt="Material study watercolor graphic">
-            <img src="portfolio-images/final-year/IMG_2243.JPEG" alt="Spatial elevation rendering layer">
-            <img src="portfolio-images/final-year/IMG_0640.JPEG" alt="Neuroarchitecture structure context">
+            <!-- 6 -->
             <img src="portfolio-images/final-year/Screenshot-2026-06-02-151810.png" alt="Axonometric cross section design view">
+            <!-- 7 -->
             <img src="portfolio-images/final-year/IMG_1728.JPEG" alt="Physical model fabrication layout">
+            <!-- 8 -->
             <img src="portfolio-images/final-year/IMG_1725.JPEG" alt="Atmospheric site sketch draft">
-            <img src="portfolio-images/final-year/2026-07-04-190609.png" alt="Axonometric elevation view">
+            <!-- 10 -->
             <img src="portfolio-images/final-year/IMG_2246.JPEG" alt="Physical timber joint tectonic layout">
-            <img src="portfolio-images/final-year/IMG_2269.JPEG" alt="Initial fine liner perspective draft">
+            <!-- 5 -->
+            <img src="portfolio-images/final-year/IMG_0640.JPEG" alt="Neuroarchitecture structure context">
+            <!-- 3 -->
+            <img src="portfolio-images/final-year/IMG_2275.JPEG" alt="Material study watercolor graphic">
+            <!-- 9 -->
+            <img src="portfolio-images/final-year/2026-07-04-190609.png" alt="Axonometric elevation view">
+
+            
           </div>
           <div class="slideshow-ui">
             <button class="slideshow-nav-btn prev-btn">← Back</button>
@@ -556,11 +607,17 @@
         
         <div class="slideshow-container">
           <div class="slides-wrapper">
+            <!-- 1 -->
             <img src="portfolio-images/fuji-kindergarten/fuji-kindergarten.jpg" alt="Fuji Kindergarten exterior courtyard view">
+            <!-- 2 -->
             <img src="portfolio-images/fuji-kindergarten/2026-07-04%20155851.png" alt="Colored layout and classroom flow blueprint layout">
+            <!-- 3 -->
             <img src="portfolio-images/fuji-kindergarten/2026-07-04%20154202.png" alt="Ink section tracking architectural tree integration">
+            <!-- 4 -->
             <img src="portfolio-images/fuji-kindergarten/2026-07-04%20155731.png" alt="Physical modeling roof overview layout">
+            <!-- 5 -->
             <img src="portfolio-images/fuji-kindergarten/2026-07-04%20155801.png" alt="Physical modeling front courtyard view elevation">
+            <!-- 6 -->
             <img src="portfolio-images/fuji-kindergarten/2026-07-04%20155936.png" alt="Seasonal vegetation render cycles">
           </div>
           <div class="slideshow-ui">
@@ -590,11 +647,19 @@
         
         <div class="slideshow-container">
           <div class="slides-wrapper">
+            <!-- 1 -->
             <img src="portfolio-images/year2/IMG_0356.JPEG" alt="Rammed earth site master plan and technical section">
+            <!-- 2 -->
             <img src="portfolio-images/year2/IMG_0357.JPEG" alt="Front elevation material texture options comparison">
+            <!-- 3 -->
             <img src="portfolio-images/year2/IMG_0358.JPEG" alt="Sectional perspective highlighting interior circulation">
+            <!-- 4 -->
             <img src="portfolio-images/year2/IMG_0448.JPEG" alt="Top-down volumetric structural casting study">
+            <!-- 5 -->
             <img src="portfolio-images/year2/IMG_0456.JPEG" alt="Monochromatic spatial massing iteration model">
+            <!-- 5 -->
+            <img src="portfolio-images/year2/year2-site-model.jpeg" alt="Site model">
+            
           </div>
           <div class="slideshow-ui">
             <button class="slideshow-nav-btn prev-btn">← Back</button>
@@ -623,12 +688,20 @@
         
         <div class="slideshow-container">
           <div class="slides-wrapper">
-            <img src="portfolio-images/year1/IMG_8140.JPEG" alt="Tactile wood yoga pavilion study model">
-            <img src="portfolio-images/year1/2026-07-04-191025.png" alt="Postural measurements and sky viewport mapping">
-            <img src="portfolio-images/year1/IMG_0365.JPEG" alt="Exploded framing structural axonometric ink line drawing">
+            <!-- 4 -->
             <img src="portfolio-images/year1/IMG_8147.JPEG" alt="Assembled joint layout module prototype">
+            <!-- 1 -->
+            <img src="portfolio-images/year1/IMG_8140.JPEG" alt="Tactile wood yoga pavilion study model">
+            <!-- 3 -->
+            <img src="portfolio-images/year1/IMG_0365.JPEG" alt="Exploded framing structural axonometric ink line drawing">
+            <!-- 5 -->
             <img src="portfolio-images/year1/2026-07-04-190835.png" alt="Freeform internal programming flow layout blueprint">
+            <!-- 6 -->
             <img src="portfolio-images/year1/IMG_7306.JPEG" alt="Cardboard topographic layering site plan model">
+            <!-- 2 -->
+            <img src="portfolio-images/year1/2026-07-04-191025.png" alt="Postural measurements and sky viewport mapping">
+            
+            
           </div>
           <div class="slideshow-ui">
             <button class="slideshow-nav-btn prev-btn">← Back</button>
@@ -707,6 +780,7 @@
         
         <div class="slideshow-container">
           <div class="slides-wrapper">
+            <img src="portfolio-images/architectural-observations/IMG_6157.JPEG" alt="Interior concrete hollow columns and dynamic elevator capsule tracing">
             <img src="portfolio-images/architectural-observations/IMG_6160.JPEG" alt="Axonometric perspective drawing tracking tiered overlapping roof plates">
             <img src="portfolio-images/architectural-observations/IMG_0844.JPEG" alt="Linear fine ink elevation profile capturing the Eiffel Tower base">
             <img src="portfolio-images/architectural-observations/IMG_0843.JPEG" alt="Intricate urban monument sketch detailing historical fountain arches">
@@ -714,7 +788,6 @@
             <img src="portfolio-images/architectural-observations/IMG_6144.JPEG" alt="Deconstructivist parametric facade framework line drawing study">
             <img src="portfolio-images/architectural-observations/IMG_6145.JPEG" alt="Overlapping organic metallic cladding layout perspective study">
             <img src="portfolio-images/architectural-observations/IMG_6146.JPEG" alt="Domestic roof profile and structural foundation cross section line drawing">
-            <img src="portfolio-images/architectural-observations/IMG_6157.JPEG" alt="Interior concrete hollow columns and dynamic elevator capsule tracing">
             <img src="portfolio-images/architectural-observations/IMG_6158.JPEG" alt="Longitudinal section drawing detailing a sweeping terminal wing layout">
             <img src="portfolio-images/architectural-observations/IMG_6159.JPEG" alt="Biomorphic pod dwelling integrated within a rocky landscape layout">
             <img src="portfolio-images/architectural-observations/IMG_6161.JPEG" alt="Top-down geometric fracturing design mapping fragment intersections">
@@ -738,12 +811,11 @@
     <footer>
       <div class="footer-col">
         <h3>Connect</h3>
-        <p>Based in the UK<br>Actively seeking Part 1 and design roles</p>
+        <p>Based in the UK<br>Actively seeking Part 1, design and project management roles</p>
         <p class="footer-links">
-          <a href="mailto:hello@yourname.com">hello@yourname.com</a>
-          <a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn</a>
-          <a href="https://instagram.com/yourusername" target="_blank">Instagram</a>
-          <a href="#">Download Full CV PDF</a>
+          <a href="mailto:leah.atkinson05@icloud.com">leah.atkinson05@icloud.com</a>
+          <a href="https://linkedin.com/in/leahatkinson05" target="_blank">LinkedIn</a>
+          <a href="https://instagram.com/leahatkinsonarts" target="_blank">Instagram</a>
         </p>
         <small>© 2026 All rights reserved</small>
       </div>
@@ -756,8 +828,8 @@
     <div class="modal-content">
       <button class="close-modal-btn" onclick="toggleModal(false)">×</button>
       <h2>Get in Touch</h2>
-      <p style="font-size: 0.95rem; color:#666;">Looking forward to discussing Part 1 assistant roles and multi disciplinary collaborations.</p>
-      <form class="contact-form" action="https://formspree.io/f/YOUR_ENDPOINT_HERE" method="POST">
+      <p style="font-size: 0.95rem; color:#666;">Looking forward to discussing opportunities.</p>
+      <form class="contact-form" action="https://formspree.io/f/mojoyovo" method="POST">
         <div class="form-group">
           <label for="name">Name</label>
           <input type="text" id="name" name="name" required autocomplete="off">
