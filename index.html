@@ -20,6 +20,7 @@
       padding: 0;
       padding-top: 5rem;
       box-sizing: border-box;
+      line-height: 1.4;
     }
 
     a {
@@ -92,7 +93,7 @@
       max-width: 380px;
       height: auto;
       display: block;
-      mix-blend-mode: multiply; /* Helps hand-sketch transparency */
+      mix-blend-mode: multiply; /* Perfect for hand sketch transparency */
     }
 
     .hero-text-block {
@@ -101,7 +102,6 @@
       justify-content: center;
     }
 
-    /* Replicates the massive brutalist/editorial italic name typography */
     .hero-name {
       font-size: clamp(4rem, 8vw, 7rem);
       font-weight: 900;
@@ -129,21 +129,51 @@
       font-weight: 500;
     }
 
-    /* --- SECTION SEPARATORS --- */
+    /* --- SECTION INTROS (Screenshot 2026-07-04 at 18.00.36.png) --- */
     .section-anchor {
-      padding-top: 6rem;
+      padding-top: 8rem;
     }
 
-    /* --- MODULAR PROJECT STRUCTURAL GRID (Screenshot 2026-07-04 at 17.53.08.jpg) --- */
+    .section-intro-block {
+      margin-bottom: 5rem;
+      width: 100%;
+    }
+
+    /* Replicates the massive, heavy, slightly expanded header look */
+    .section-intro-title {
+      font-size: clamp(3rem, 5vw, 4.5rem);
+      font-weight: 900;
+      letter-spacing: -0.03em;
+      margin: 0 0 1rem 0;
+      line-height: 1;
+      display: inline-block;
+    }
+
+    .section-intro-text {
+      font-size: 1.35rem;
+      font-weight: 500;
+      margin: 0 0 2rem 0;
+      color: #222222;
+    }
+
+    /* The thin divider line matching the screenshot */
+    .section-divider {
+      border: 0;
+      height: 1px;
+      background-color: rgba(0, 0, 0, 0.15);
+      margin: 0;
+      width: 100%;
+    }
+
+    /* --- MODULAR PROJECT ROW (Screenshot 2026-07-04 at 17.53.08.jpg) --- */
     .project-row {
       display: grid;
       grid-template-columns: 1fr 2.8fr;
       gap: 3rem;
-      margin-bottom: 8rem;
+      margin-bottom: 10rem;
       align-items: start;
     }
 
-    /* Left Column Elements */
     .project-left-col {
       display: flex;
       flex-direction: column;
@@ -168,7 +198,6 @@
       margin: 0 0 1.5rem 0;
     }
 
-    /* Right Column Elements */
     .project-right-col {
       display: flex;
       flex-direction: column;
@@ -183,12 +212,12 @@
       width: 100%;
     }
 
-    /* --- INTERACTIVE CLICK/SWIPE SLIDESHOW --- */
+    /* --- SLIDESHOW MECHANISM --- */
     .slideshow-container {
       position: relative;
       width: 100%;
       overflow: hidden;
-      cursor: e-resize; /* Indicates interactiveness */
+      cursor: e-resize;
       user-select: none;
     }
 
@@ -206,7 +235,6 @@
       display: block;
     }
 
-    /* Minimal Floating UI Controls */
     .slideshow-ui {
       display: flex;
       justify-content: space-between;
@@ -220,18 +248,14 @@
       font-family: monospace;
     }
 
-    .slide-hints {
-      font-size: 0.85rem;
-    }
-
-    /* --- MODAL CONTACT POPUP --- */
+    /* --- CONTACT POPUP MODAL --- */
     .contact-modal {
       position: fixed;
       top: 0;
       left: 0;
       right: 0;
       bottom: 0;
-      background-color: rgba(251, 250, 247, 0.98); /* Matches background seamlessly */
+      background-color: rgba(251, 250, 247, 0.98);
       z-index: 10000;
       display: flex;
       justify-content: center;
@@ -261,7 +285,6 @@
       border: none;
       font-size: 2rem;
       cursor: pointer;
-      color: #222222;
     }
 
     .contact-form {
@@ -307,15 +330,35 @@
       font-size: 1rem;
       font-weight: bold;
       cursor: pointer;
-      transition: background 0.2s ease;
       margin-top: 1rem;
     }
 
-    .submit-btn:hover {
-      background: #444444;
+    /* --- FOOTER SECTIONS --- */
+    footer {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2rem;
+      padding: 6rem 0 4rem 0;
+      border-top: 1px solid rgba(0, 0, 0, 0.1);
+      margin-top: 6rem;
     }
 
-    /* --- RESPONSIVE MEDIA QUERIES FOR MOBILE --- */
+    footer h3 {
+      font-size: 1rem;
+      font-weight: bold;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+
+    .footer-col {
+      font-size: 0.95rem;
+    }
+
+    .footer-col p {
+      margin: 0 0 1rem 0;
+    }
+
+    /* --- MOBILE RESPONSIVENESS --- */
     @media only screen and (max-width: 900px) {
       header {
         grid-template-columns: 1fr;
@@ -346,12 +389,16 @@
         gap: 0.2rem;
         margin-bottom: 1rem;
       }
+      footer {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+      }
     }
   </style>
 </head>
 <body>
 
-  <!-- FIXED FLOATING NAVIGATION HEADER -->
+  <!-- GLOBAL STICKY NAVIGATION HEADER -->
   <header>
     <div class="header-brand">
       <a href="#">Leah Atkinson</a>
@@ -365,16 +412,14 @@
     </div>
   </header>
 
-  <!-- MAIN EDITORIAL PORTFOLIO STREAM -->
+  <!-- PORTFOLIO WRAPPER -->
   <main>
 
-    <!-- HERO HOME COMPOSITION (Matches Screenshot 2026-07-04 at 17.52.33.jpg) -->
+    <!-- HERO SECTION (Screenshot 2026-07-04 at 17.52.33.jpg) -->
     <section class="hero-container">
       <div class="hero-illustration">
-        <!-- Local reference to your hand graphic background image -->
-        <img src="images/hero-flower-sketch.jpg" alt="Fine liner floral storytelling sketch">
+        <img src="images/hero-flower-sketch.jpg" alt="Fine liner floral sketch layout">
       </div>
-      
       <div class="hero-text-block">
         <h1 class="hero-name">Leah<br>Atkinson</h1>
         <div class="hero-credentials">
@@ -389,19 +434,20 @@
     </section>
 
 
-    <!-- ========================================== -->
-    <!-- SECTION: ARCHITECTURE MODULE WORKSTREAM -->
-    <!-- ========================================== -->
+    <!-- ========================================================= -->
+    <!-- ARCHITECTURE SECTION INTRO (Screenshot 2026-07-04 at 18.00.36.png) -->
+    <!-- ========================================================= -->
     <div id="architecture" class="section-anchor"></div>
-    
-    <!-- TEMPLATE BLOCK START: Copy from here to add a new project -->
+    <div class="section-intro-block">
+      <h2 class="section-intro-title">Architecture</h2>
+      <div class="section-intro-text">Spatial design driven by neuroarchitecture, natural restoration, and human well being.</div>
+      <hr class="section-divider">
+    </div>
+
+    <!-- ARCHITECTURE PROJECT (Screenshot 2026-07-04 at 17.53.08.jpg) -->
     <section class="project-row">
-      
-      <!-- Left Info Column -->
       <div class="project-left-col">
-        <div class="project-category">
-          <span>⚙</span> Final Year Project
-        </div>
+        <div class="project-category"><span>⚙</span> Final Year Project</div>
         <div class="project-description">
           <p>Integer et placerat est, eu imperdiet neque. Proin sit amet purus metus. In nec efficitur justo, sed maximus est.</p>
           <p>Ut ornare arcu eros, at condimentum enim imperdiet vitae. Morbi lorem augue, commodo vel ipsum ac, sollicitudin placerat urna. Praesent amet mauris tortor. Duis ac risus sem. Fusce at elementum justo, ac mollis turpis. Pellentesque accumsan purus ut tristique bibendum. Nam feugiat sit amet enim in vehicula.</p>
@@ -409,17 +455,15 @@
         </div>
       </div>
 
-      <!-- Right Gallery Column (Matches Screenshot 2026-07-04 at 17.53.08.jpg) -->
       <div class="project-right-col">
         <div class="project-header-line">
           <div class="project-title">Canopies of the City</div>
           <div class="project-date">2026</div>
         </div>
         
-        <!-- Clickable / Swipeable Slideshow Interface -->
+        <!-- Interactive Slideshow -->
         <div class="slideshow-container">
           <div class="slides-wrapper">
-            <!-- Put as many project images here as you want -->
             <img src="images/canopies-elevation1.jpg" alt="Canopies of the City elevation view">
             <img src="images/canopies-plan.jpg" alt="Canopies of the City technical plan view">
             <img src="images/canopies-section.jpg" alt="Canopies of the City structural layout section">
@@ -430,31 +474,35 @@
           </div>
         </div>
       </div>
-
     </section>
-    <!-- TEMPLATE BLOCK END -->
 
 
-    <!-- ========================================== -->
-    <!-- SECTION: ART AND ILLUSTRATION MODULE STREAM -->
-    <!-- ========================================== -->
+    <!-- ========================================================= -->
+    <!-- ART SECTION INTRO (Matching Screenshot Style) -->
+    <!-- ========================================================= -->
     <div id="art" class="section-anchor"></div>
+    <div class="section-intro-block">
+      <h2 class="section-intro-title">Art and Illustration</h2>
+      <div class="section-intro-text">Atmospheric storytelling captured through fineliner, watercolor, and physical mediums.</div>
+      <hr class="section-divider">
+    </div>
 
-    <!-- Additional Project Row Example -->
+    <!-- ART PROJECT -->
     <section class="project-row">
       <div class="project-left-col">
-        <div class="project-category">
-          <span>🎨</span> Fine Art & Watercolor
-        </div>
+        <div class="project-category"><span>🎨</span> Fine Art Work</div>
         <div class="project-description">
-          <p>A sequence of atmospheric studies observing neurological wellbeing and texture composition. Exploring physical fine liners layered beneath deep natural watercolor washes to combat sterile greyscale conditions.</p>
+          <p>A sequence of atmospheric studies observing neurological well being and texture composition. Exploring physical fine liners layered beneath deep natural watercolor washes to combat sterile greyscale conditions.</p>
         </div>
       </div>
+
       <div class="project-right-col">
         <div class="project-header-line">
           <div class="project-title">Beyond Grey Explorations</div>
           <div class="project-date">2026</div>
         </div>
+        
+        <!-- Interactive Slideshow -->
         <div class="slideshow-container">
           <div class="slides-wrapper">
             <img src="images/beyond-grey-1.jpg" alt="Watercolor tone study">
@@ -468,16 +516,52 @@
       </div>
     </section>
 
+
+    <!-- GLOBAL MULTI-COLUMN INFO FOOTER -->
+    <footer>
+      <div class="footer-col">
+        <h3>Connect</h3>
+        <p>Based in the UK<br>Actively seeking Part 1 and design roles</p>
+        <p>
+          <a href="mailto:hello@yourname.com">hello@yourname.com</a><br>
+          <a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn</a><br>
+          <a href="https://instagram.com/yourusername" target="_blank">Instagram</a><br>
+          <a href="#">Download Full CV PDF</a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <h3>Philosophy</h3>
+        <p>I am a RIBA Part 1 Architecture graduate dedicated to creating spaces that restore and inspire. My design philosophy is anchored in neuroarchitecture, exploring how the built environment impacts our mental and physical well being.</p>
+        <p>Driven by my dissertation research looking beyond grey, I advocate for moving past sterile aesthetics by using intentional color theory and natural elements to design spaces that actively improve human life. My personal style is simple yet highly effective, artistic, and deeply human centric.</p>
+      </div>
+      <div class="footer-col">
+        <h3>Approach</h3>
+        <p>As a designer, I bridge the gap between technical precision and emotional atmosphere. I utilize AutoCAD for rigorous drafting and SketchUp for spatial modeling, but my true passion lies in the art of the hand. I rely heavily on fineliner and watercolor sketching to bring the raw atmosphere and narrative of a project to life.</p>
+      </div>
+      <div class="footer-col">
+        <h3>Expertise</h3>
+        <p>
+          Spatial Design<br>
+          Neuroarchitecture<br>
+          Atmosphere and Storytelling<br>
+          Fine Liner and Watercolor<br>
+          Physical Model Making<br>
+          AutoCAD and SketchUp<br>
+          Furniture and Interior Design
+        </p>
+        <br>
+        <small>© 2026 All rights reserved</small>
+      </div>
+    </footer>
+
   </main>
 
-  <!-- NATIVE MINIMAL POPUP CONTACT MODAL -->
+  <!-- POPUP CONTACT MODAL -->
   <div class="contact-modal" id="contactModal">
     <div class="modal-content">
       <button class="close-modal-btn" onclick="toggleModal(false)">×</button>
       <h2>Get in Touch</h2>
-      <p style="font-size: 0.95rem; color:#666;">Looking forward to discussing Part 1 assistant roles and multi-disciplinary collaborations.</p>
-      
-      <!-- Connect this to Formspree.io or similar endpoint for absolute form freedom -->
+      <p style="font-size: 0.95rem; color:#666;">Looking forward to discussing Part 1 assistant roles and multi disciplinary collaborations.</p>
       <form class="contact-form" action="https://formspree.io/f/YOUR_ENDPOINT_HERE" method="POST">
         <div class="form-group">
           <label for="name">Name</label>
@@ -496,16 +580,14 @@
     </div>
   </div>
 
-  <!-- --- AUTOMATED SYSTEM JAVASCRIPT --- -->
+  <!-- AUTOMATED DYNAMIC SLIDESHOW ENGINE -->
   <script>
-    // Handles opening/closing the contact popup overlay
     function toggleModal(show) {
       const modal = document.getElementById('contactModal');
       if (show) modal.classList.add('active');
       else modal.classList.remove('active');
     }
 
-    // Dynamic Modular Slideshow Initialization Engine
     document.querySelectorAll('.slideshow-container').forEach(container => {
       const wrapper = container.querySelector('.slides-wrapper');
       const slides = wrapper.querySelectorAll('img');
@@ -513,13 +595,11 @@
       let currentIdx = 0;
       const totalSlides = slides.length;
 
-      // Update functional counter text layout
       function updateCounter() {
         if(counter) counter.textContent = `${currentIdx + 1} / ${totalSlides}`;
       }
       updateCounter();
 
-      // Click behavior: advance slide linearly or cycle back
       container.addEventListener('click', () => {
         if (totalSlides <= 1) return;
         currentIdx = (currentIdx + 1) % totalSlides;
