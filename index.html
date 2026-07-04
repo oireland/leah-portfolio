@@ -47,9 +47,19 @@
       align-items: center;
     }
 
-    .header-brand {
+    .header-brand a {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
       font-weight: bold;
       font-size: 1.1rem;
+    }
+
+    .header-avatar {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      object-fit: cover;
     }
 
     .header-nav a {
@@ -215,7 +225,6 @@
       position: relative;
       width: 100%;
       overflow: hidden;
-      cursor: e-resize;
       user-select: none;
     }
 
@@ -241,6 +250,22 @@
       margin-top: 0.75rem;
       font-size: 0.9rem;
       color: rgba(0,0,0,0.6);
+    }
+
+    .slideshow-nav-btn {
+      background: none;
+      border: none;
+      font-family: inherit;
+      font-size: 1.1rem;
+      font-weight: bold;
+      color: #222222;
+      cursor: pointer;
+      padding: 0.2rem 0.6rem;
+      transition: opacity 0.2s;
+    }
+
+    .slideshow-nav-btn:hover {
+      opacity: 0.4;
     }
 
     .slide-counter {
@@ -332,74 +357,106 @@
       margin-top: 1rem;
     }
 
-    /* --- FOOTER SECTIONS --- */
+    /* --- MINIMALIST CLEAN FOOTER --- */
     footer {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 2rem;
-      padding: 6rem 0 4rem 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 5rem 0 4rem 0;
       border-top: 1px solid rgba(0, 0, 0, 0.1);
       margin-top: 6rem;
     }
 
     footer h3 {
-      font-size: 1rem;
+      font-size: 1.1rem;
       font-weight: bold;
       margin-top: 0;
       margin-bottom: 1rem;
     }
 
     .footer-col {
-      font-size: 0.95rem;
+      font-size: 1rem;
+      max-width: 400px;
     }
 
     .footer-col p {
-      margin: 0 0 1rem 0;
+      margin: 0 0 1.5rem 0;
+    }
+
+    .footer-links a {
+      display: inline-block;
+      margin: 0 0.75rem;
+      font-weight: 500;
+      border-bottom: 1px solid transparent;
+    }
+
+    .footer-links a:hover {
+      border-bottom: 1px solid #222222;
+      opacity: 1;
     }
 
     /* --- RESPONSIVE MEDIA QUERIES FOR MOBILE --- */
     @media only screen and (max-width: 900px) {
       header {
-        grid-template-columns: 1fr;
-        gap: 1rem;
-        text-align: center;
-        position: relative;
-        padding: 1.5rem;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        display: flex;
+        justify-content: space-between;
+        padding: 1.25rem 1.5rem;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.02);
       }
-      .header-cta { text-align: center; }
-      body { padding-top: 0; }
+      
+      .header-nav { 
+        display: none !important; 
+      }
+      
+      body { 
+        padding-top: 5.5rem; 
+      }
       
       .hero-container {
         grid-template-columns: 1fr;
-        gap: 2rem;
+        gap: 0;
         text-align: center;
+        min-height: auto;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
       }
-      .hero-illustration img { margin: 0 auto; }
-      .hero-name { margin-bottom: 1.5rem; }
-      .laptop-only { display: none !important; }
+
+      .hero-illustration {
+        display: none !important;
+      }
+      
+      .hero-name { 
+        margin-bottom: 1.5rem; 
+      }
 
       .project-row {
         grid-template-columns: 1fr;
         gap: 1.5rem;
         margin-bottom: 5rem;
       }
+
       .project-header-line {
         flex-direction: column;
         gap: 0.2rem;
         margin-bottom: 1rem;
-      }
-      footer {
-        grid-template-columns: 1fr;
-        gap: 3rem;
       }
     }
   </style>
 </head>
 <body>
 
+  <!-- FLOATING NAVIGATION BAR -->
   <header>
     <div class="header-brand">
-      <a href="#">Leah Atkinson</a>
+      <a href="#">
+        <img src="portfolio-images/leah-icon.png" alt="" class="header-avatar">
+        Leah Atkinson
+      </a>
     </div>
     <nav class="header-nav">
       <a href="#architecture">Architecture</a>
@@ -410,11 +467,13 @@
     </div>
   </header>
 
+  <!-- PORTFOLIO WRAPPER -->
   <main>
 
+    <!-- HERO HOME COMPOSITION -->
     <section class="hero-container">
       <div class="hero-illustration">
-        <img src="portfolio-images/final-year/IMG_2269.JPEG" alt="Fine liner title page sketch layer">
+        <img src="portfolio-images/title-flowers.png" alt="Portfolio context composition entry graphic">
       </div>
       <div class="hero-text-block">
         <h1 class="hero-name">Leah<br>Atkinson</h1>
@@ -430,6 +489,9 @@
     </section>
 
 
+    <!-- ========================================================= -->
+    <!-- ARCHITECTURE SECTION -->
+    <!-- ========================================================= -->
     <div id="architecture" class="section-anchor"></div>
     <div class="section-intro-block">
       <h2 class="section-intro-title">Architecture</h2>
@@ -437,6 +499,7 @@
       <hr class="section-divider">
     </div>
 
+    <!-- PROJECT 1: CANOPIES OF THE CITY (FINAL YEAR) -->
     <section class="project-row">
       <div class="project-left-col">
         <div class="project-category"><span>⚙</span> Final Year Project</div>
@@ -467,13 +530,15 @@
             <img src="portfolio-images/final-year/IMG_2269.JPEG" alt="Initial fine liner perspective draft">
           </div>
           <div class="slideshow-ui">
-            <div class="slide-hints">← Click image to advance →</div>
+            <button class="slideshow-nav-btn prev-btn">← Back</button>
             <div class="slide-counter">1 / 11</div>
+            <button class="slideshow-nav-btn next-btn">Next →</button>
           </div>
         </div>
       </div>
     </section>
 
+    <!-- PROJECT 2: FUJI KINDERGARTEN STUDY -->
     <section class="project-row">
       <div class="project-left-col">
         <div class="project-category"><span>🏫</span> Case Study & Adaptation</div>
@@ -499,13 +564,15 @@
             <img src="portfolio-images/fuji-kindergarten/2026-07-04%20155936.png" alt="Seasonal vegetation render cycles">
           </div>
           <div class="slideshow-ui">
-            <div class="slide-hints">← Click image to advance →</div>
+            <button class="slideshow-nav-btn prev-btn">← Back</button>
             <div class="slide-counter">1 / 6</div>
+            <button class="slideshow-nav-btn next-btn">Next →</button>
           </div>
         </div>
       </div>
     </section>
 
+    <!-- PROJECT 3: URBAN ART BLOCKS (YEAR 2) -->
     <section class="project-row">
       <div class="project-left-col">
         <div class="project-category"><span>🧱</span> Year 2 Studio</div>
@@ -530,13 +597,15 @@
             <img src="portfolio-images/year2/IMG_0456.JPEG" alt="Monochromatic spatial massing iteration model">
           </div>
           <div class="slideshow-ui">
-            <div class="slide-hints">← Click image to advance →</div>
+            <button class="slideshow-nav-btn prev-btn">← Back</button>
             <div class="slide-counter">1 / 5</div>
+            <button class="slideshow-nav-btn next-btn">Next →</button>
           </div>
         </div>
       </div>
     </section>
 
+    <!-- PROJECT 4: STUDIO FOUNDATIONS (YEAR 1) -->
     <section class="project-row">
       <div class="project-left-col">
         <div class="project-category"><span>📐</span> Year 1 Studio</div>
@@ -562,14 +631,18 @@
             <img src="portfolio-images/year1/IMG_7306.JPEG" alt="Cardboard topographic layering site plan model">
           </div>
           <div class="slideshow-ui">
-            <div class="slide-hints">← Click image to advance →</div>
+            <button class="slideshow-nav-btn prev-btn">← Back</button>
             <div class="slide-counter">1 / 6</div>
+            <button class="slideshow-nav-btn next-btn">Next →</button>
           </div>
         </div>
       </div>
     </section>
 
 
+    <!-- ========================================================= -->
+    <!-- ART AND ILLUSTRATION SECTION -->
+    <!-- ========================================================= -->
     <div id="art" class="section-anchor"></div>
     <div class="section-intro-block">
       <h2 class="section-intro-title">Art and Illustration</h2>
@@ -577,6 +650,7 @@
       <hr class="section-divider">
     </div>
 
+    <!-- PROJECT 5: BEYOND GREY EXPLORATIONS -->
     <section class="project-row">
       <div class="project-left-col">
         <div class="project-category"><span>🎨</span> Fine Art Work</div>
@@ -607,13 +681,15 @@
             <img src="portfolio-images/misc-art/IMG_0742.JPEG" alt="Whimsical local wildlife illustration titled Silly Cow">
           </div>
           <div class="slideshow-ui">
-            <div class="slide-hints">← Click image to advance →</div>
+            <button class="slideshow-nav-btn prev-btn">← Back</button>
             <div class="slide-counter">1 / 11</div>
+            <button class="slideshow-nav-btn next-btn">Next →</button>
           </div>
         </div>
       </div>
     </section>
 
+    <!-- PROJECT 6: ARCHITECTURAL OBSERVATIONS -->
     <section class="project-row">
       <div class="project-left-col">
         <div class="project-category"><span>✏️</span> Field & Form Studies</div>
@@ -649,52 +725,33 @@
             <img src="portfolio-images/architectural-observations/IMG_1624-3.JPEG" alt="Charming local human scale sketch tracking pedestrians down an active alleyway">
           </div>
           <div class="slideshow-ui">
-            <div class="slide-hints">← Click image to advance →</div>
+            <button class="slideshow-nav-btn prev-btn">← Back</button>
             <div class="slide-counter">1 / 16</div>
+            <button class="slideshow-nav-btn next-btn">Next →</button>
           </div>
         </div>
       </div>
     </section>
 
 
+    <!-- GLOBAL CLEAN INFO FOOTER -->
     <footer>
       <div class="footer-col">
         <h3>Connect</h3>
         <p>Based in the UK<br>Actively seeking Part 1 and design roles</p>
-        <p>
-          <a href="mailto:hello@yourname.com">hello@yourname.com</a><br>
-          <a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn</a><br>
-          <a href="https://instagram.com/yourusername" target="_blank">Instagram</a><br>
+        <p class="footer-links">
+          <a href="mailto:hello@yourname.com">hello@yourname.com</a>
+          <a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn</a>
+          <a href="https://instagram.com/yourusername" target="_blank">Instagram</a>
           <a href="#">Download Full CV PDF</a>
         </p>
-      </div>
-      <div class="footer-col">
-        <h3>Philosophy</h3>
-        <p>I am a RIBA Part 1 Architecture graduate dedicated to creating spaces that restore and inspire. My design philosophy is anchored in neuroarchitecture, exploring how the built environment impacts our mental and physical well being.</p>
-        <p>Driven by my dissertation research looking beyond grey, I advocate for moving past sterile aesthetics by using intentional color theory and natural elements to design spaces that actively improve human life. My personal style is simple yet highly effective, artistic, and deeply human centric.</p>
-      </div>
-      <div class="footer-col">
-        <h3>Approach</h3>
-        <p>As a designer, I bridge the gap between technical precision and emotional atmosphere. I utilize AutoCAD for rigorous drafting and SketchUp for spatial modeling, but my true passion lies in the art of the hand. I rely heavily on fineliner and watercolor sketching to bring the raw atmosphere and narrative of a project to life.</p>
-      </div>
-      <div class="footer-col">
-        <h3>Expertise</h3>
-        <p>
-          Spatial Design<br>
-          Neuroarchitecture<br>
-          Atmosphere and Storytelling<br>
-          Fine Liner and Watercolor<br>
-          Physical Model Making<br>
-          AutoCAD and SketchUp<br>
-          Furniture and Interior Design
-        </p>
-        <br>
         <small>© 2026 All rights reserved</small>
       </div>
     </footer>
 
   </main>
 
+  <!-- POPUP CONTACT MODAL -->
   <div class="contact-modal" id="contactModal">
     <div class="modal-content">
       <button class="close-modal-btn" onclick="toggleModal(false)">×</button>
@@ -718,6 +775,7 @@
     </div>
   </div>
 
+  <!-- RUNTIME INTERACTIVE SLIDESHOW & TOUCH ENGINE -->
   <script>
     function toggleModal(show) {
       const modal = document.getElementById('contactModal');
@@ -729,20 +787,69 @@
       const wrapper = container.querySelector('.slides-wrapper');
       const slides = wrapper.querySelectorAll('img');
       const counter = container.querySelector('.slide-counter');
+      const prevBtn = container.querySelector('.prev-btn');
+      const nextBtn = container.querySelector('.next-btn');
+      
       let currentIdx = 0;
       const totalSlides = slides.length;
 
-      function updateCounter() {
-        if(counter) counter.textContent = `${currentIdx + 1} / ${totalSlides}`;
-      }
-      updateCounter();
-
-      container.addEventListener('click', () => {
+      function updateSlide(targetIndex) {
         if (totalSlides <= 1) return;
-        currentIdx = (currentIdx + 1) % totalSlides;
+        
+        // Cyclical boundary loops
+        if (targetIndex >= totalSlides) {
+          currentIdx = 0;
+        } else if (targetIndex < 0) {
+          currentIdx = totalSlides - 1;
+        } else {
+          currentIdx = targetIndex;
+        }
+
         wrapper.style.transform = `translateX(-${currentIdx * 100}%)`;
-        updateCounter();
+        if (counter) counter.textContent = `${currentIdx + 1} / ${totalSlides}`;
+      }
+
+      // Explicit forward/back navigation triggers
+      if (nextBtn) {
+        nextBtn.addEventListener('click', (e) => {
+          e.stopPropagation();
+          updateSlide(currentIdx + 1);
+        });
+      }
+
+      if (prevBtn) {
+        prevBtn.addEventListener('click', (e) => {
+          e.stopPropagation();
+          updateSlide(currentIdx - 1);
+        });
+      }
+
+      // Preserve full image click fallback sequence
+      wrapper.addEventListener('click', () => {
+        updateSlide(currentIdx + 1);
       });
+
+      // Mobile Touch Swipe Architecture
+      let touchStartX = 0;
+      let touchEndX = 0;
+
+      container.addEventListener('touchstart', (e) => {
+        touchStartX = e.touches[0].clientX;
+      }, { passive: true });
+
+      container.addEventListener('touchend', (e) => {
+        touchEndX = e.changedTouches[0].clientX;
+        handleSwipeGesture();
+      }, { passive: true });
+
+      function handleSwipeGesture() {
+        const structuralSwipeThreshold = 40; // minimum pixel delta
+        if (touchStartX - touchEndX > structuralSwipeThreshold) {
+          updateSlide(currentIdx + 1); // Swiped Left -> Forward
+        } else if (touchEndX - touchStartX > structuralSwipeThreshold) {
+          updateSlide(currentIdx - 1); // Swiped Right -> Back
+        }
+      }
     });
   </script>
 </body>
