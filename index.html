@@ -13,7 +13,7 @@
     }
     
     body {
-      background-color: #fbfaf7; /* Warm watercolor paper tone */
+      background-color: #fbfaf7; /* Warm watercolor paper paper-stock background */
       color: #222222;
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
       margin: 0;
@@ -33,7 +33,7 @@
       opacity: 0.6;
     }
 
-    /* --- FIXED STICKY HEADER --- */
+    /* --- GLOBAL HEADER OVERLAY --- */
     header {
       position: fixed;
       top: 0;
@@ -78,13 +78,15 @@
       padding: 0 2.5rem;
     }
 
-    /* --- HERO CONTAINER (Screenshot 2026-07-04 at 17.52.33.jpg) --- */
+    /* --- HERO COMPOSITION ---
+       Designed to mirror the specific visual spacing rules from Screenshot 2026-07-04 at 17.52.33.jpg
+    --- */
     .hero-container {
       display: grid;
       grid-template-columns: 1fr 1.8fr;
       gap: 4rem;
       align-items: center;
-      min-height: 80vh;
+      min-height: 85vh;
       padding-bottom: 4rem;
     }
 
@@ -93,7 +95,7 @@
       max-width: 380px;
       height: auto;
       display: block;
-      mix-blend-mode: multiply; /* Perfect for hand sketch transparency */
+      mix-blend-mode: multiply; /* Eliminates white borders on raw scan layers */
     }
 
     .hero-text-block {
@@ -129,7 +131,9 @@
       font-weight: 500;
     }
 
-    /* --- SECTION INTROS (Screenshot 2026-07-04 at 18.00.36.png) --- */
+    /* --- SECTION INTROS ---
+       Recreates the expanded bold typography headers from Screenshot 2026-07-04 at 18.00.36.png
+    --- */
     .section-anchor {
       padding-top: 8rem;
     }
@@ -139,7 +143,6 @@
       width: 100%;
     }
 
-    /* Replicates the massive, heavy, slightly expanded header look */
     .section-intro-title {
       font-size: clamp(3rem, 5vw, 4.5rem);
       font-weight: 900;
@@ -156,7 +159,6 @@
       color: #222222;
     }
 
-    /* The thin divider line matching the screenshot */
     .section-divider {
       border: 0;
       height: 1px;
@@ -165,7 +167,9 @@
       width: 100%;
     }
 
-    /* --- MODULAR PROJECT ROW (Screenshot 2026-07-04 at 17.53.08.jpg) --- */
+    /* --- MODULAR PROJECT LAYOUT ---
+       Maintains the distinct metadata left column alignment seen in Screenshot 2026-07-04 at 17.53.08.jpg
+    --- */
     .project-row {
       display: grid;
       grid-template-columns: 1fr 2.8fr;
@@ -212,7 +216,7 @@
       width: 100%;
     }
 
-    /* --- SLIDESHOW MECHANISM --- */
+    /* --- INTERACTIVE SLIDESHOW COMPONENT --- */
     .slideshow-container {
       position: relative;
       width: 100%;
@@ -248,7 +252,7 @@
       font-family: monospace;
     }
 
-    /* --- CONTACT POPUP MODAL --- */
+    /* --- POPUP CONTACT MODAL --- */
     .contact-modal {
       position: fixed;
       top: 0;
@@ -333,7 +337,7 @@
       margin-top: 1rem;
     }
 
-    /* --- FOOTER SECTIONS --- */
+    /* --- STRUCTURAL INFO FOOTER --- */
     footer {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
@@ -358,7 +362,7 @@
       margin: 0 0 1rem 0;
     }
 
-    /* --- MOBILE RESPONSIVENESS --- */
+    /* --- LAPTOP HIDDEN LAYOUT OVERRIDES --- */
     @media only screen and (max-width: 900px) {
       header {
         grid-template-columns: 1fr;
@@ -398,7 +402,7 @@
 </head>
 <body>
 
-  <!-- GLOBAL STICKY NAVIGATION HEADER -->
+  <!-- FLOATING NAVIGATION BAR -->
   <header>
     <div class="header-brand">
       <a href="#">Leah Atkinson</a>
@@ -412,13 +416,14 @@
     </div>
   </header>
 
-  <!-- PORTFOLIO WRAPPER -->
+  <!-- MAIN SCROLLING STREAM -->
   <main>
 
-    <!-- HERO SECTION (Screenshot 2026-07-04 at 17.52.33.jpg) -->
+    <!-- HERO HOME COMPOSITION (Screenshot 2026-07-04 at 17.52.33.jpg) -->
     <section class="hero-container">
       <div class="hero-illustration">
-        <img src="images/hero-flower-sketch.jpg" alt="Fine liner floral sketch layout">
+        <!-- Local folder directory reference to your title sketch image -->
+        <img src="final-year/IMG_2269.JPEG" alt="Fine liner title page sketch layer">
       </div>
       <div class="hero-text-block">
         <h1 class="hero-name">Leah<br>Atkinson</h1>
@@ -435,7 +440,7 @@
 
 
     <!-- ========================================================= -->
-    <!-- ARCHITECTURE SECTION INTRO (Screenshot 2026-07-04 at 18.00.36.png) -->
+    <!-- SECTION I: ARCHITECTURE WORKSTREAM -->
     <!-- ========================================================= -->
     <div id="architecture" class="section-anchor"></div>
     <div class="section-intro-block">
@@ -444,33 +449,41 @@
       <hr class="section-divider">
     </div>
 
-    <!-- ARCHITECTURE PROJECT (Screenshot 2026-07-04 at 17.53.08.jpg) -->
+    <!-- PROJECT BLOCK: FINAL YEAR WORK -->
     <section class="project-row">
       <div class="project-left-col">
         <div class="project-category"><span>⚙</span> Final Year Project</div>
+        
+        <!-- EDIT HERE: ARCHITECTURE PROJECT DESCRIPTIONS -->
         <div class="project-description">
-          <p>Integer et placerat est, eu imperdiet neque. Proin sit amet purus metus. In nec efficitur justo, sed maximus est.</p>
-          <p>Ut ornare arcu eros, at condimentum enim imperdiet vitae. Morbi lorem augue, commodo vel ipsum ac, sollicitudin placerat urna. Praesent amet mauris tortor. Duis ac risus sem. Fusce at elementum justo, ac mollis turpis. Pellentesque accumsan purus ut tristique bibendum. Nam feugiat sit amet enim in vehicula.</p>
-          <p style="font-size: 0.9rem; color: #666;">Praesent bibendum a elit non efficitur. Etiam et velit vitae quam aliquet fermentum. Quisque sit amet nulla dictum, cursus erat a, tempus est.</p>
+          <p>This space acts as your primary project summary container. You can replace this paragraph text directly with your thesis context, core site locations, and design intentions.</p>
+          <p>Your research strings regarding neuroarchitecture color theory and atmospheric watercolor rendering frameworks can be expanded comprehensively right through this secondary block.</p>
+          <p style="font-size: 0.9rem; color: #666;">Technical execution data: Designed using AutoCAD for precise drafting files alongside architectural model mockups processed in SketchUp.</p>
         </div>
       </div>
 
       <div class="project-right-col">
         <div class="project-header-line">
+          <!-- EDIT HERE: ARCHITECTURE PROJECT HEADLINE DETAILS -->
           <div class="project-title">Canopies of the City</div>
           <div class="project-date">2026</div>
         </div>
         
-        <!-- Interactive Slideshow -->
+        <!-- Interactive Media Slider Loaded with your Local Directory Images -->
         <div class="slideshow-container">
           <div class="slides-wrapper">
-            <img src="images/canopies-elevation1.jpg" alt="Canopies of the City elevation view">
-            <img src="images/canopies-plan.jpg" alt="Canopies of the City technical plan view">
-            <img src="images/canopies-section.jpg" alt="Canopies of the City structural layout section">
+            <img src="final-year/Screenshot 2026-07-04 190339.png" alt="Canopies of the City panoramic project layer">
+            <img src="final-year/PK final-year/Screenshot 2026-07-04 164726.png" alt="Final year master plan drafting file">
+            <img src="final-year/IMG_2275.JPEG" alt="Material study watercolor graphic">
+            <img src="final-year/IMG_2243.JPEG" alt="Spatial elevation rendering layer">
+            <img src="final-year/IMG_0640.JPEG" alt="Neuroarchitecture structure context">
+            <img src="final-year/Screenshot 2026-06-02 151810.png" alt="Axonometric cross section design view">
+            <img src="final-year/IMG_1728.JPEG" alt="Physical model fabrication layout">
+            <img src="final-year/IMG_1725.JPEG" alt="Atmospheric site sketch draft">
           </div>
           <div class="slideshow-ui">
-            <div class="slide-hints">← Click image to advance →</div>
-            <div class="slide-counter">1 / 3</div>
+            <div class="slide-hints">← Click media file to advance slider view →</div>
+            <div class="slide-counter">1 / 8</div>
           </div>
         </div>
       </div>
@@ -478,7 +491,7 @@
 
 
     <!-- ========================================================= -->
-    <!-- ART SECTION INTRO (Matching Screenshot Style) -->
+    <!-- SECTION II: ART AND ILLUSTRATION WORKSTREAM -->
     <!-- ========================================================= -->
     <div id="art" class="section-anchor"></div>
     <div class="section-intro-block">
@@ -487,30 +500,64 @@
       <hr class="section-divider">
     </div>
 
-    <!-- ART PROJECT -->
+    <!-- MODULAR ART BLOCK: MISC ART SERIES -->
     <section class="project-row">
       <div class="project-left-col">
-        <div class="project-category"><span>🎨</span> Fine Art Work</div>
+        <div class="project-category"><span>🎨</span> Creative Archive</div>
+        
+        <!-- EDIT HERE: ARTWORK PROJECT DESCRIPTIONS -->
         <div class="project-description">
-          <p>A sequence of atmospheric studies observing neurological well being and texture composition. Exploring physical fine liners layered beneath deep natural watercolor washes to combat sterile greyscale conditions.</p>
+          <p>This container maps directly to your local misc art folder repository. Update this summary to describe your fine art techniques, canvas layouts, or editorial painting collections.</p>
         </div>
       </div>
 
       <div class="project-right-col">
         <div class="project-header-line">
-          <div class="project-title">Beyond Grey Explorations</div>
+          <!-- EDIT HERE: ARTWORK HEADER DETAILS -->
+          <div class="project-title">Muted Tones & Fine Liner Studies</div>
           <div class="project-date">2026</div>
         </div>
         
-        <!-- Interactive Slideshow -->
         <div class="slideshow-container">
           <div class="slides-wrapper">
-            <img src="images/beyond-grey-1.jpg" alt="Watercolor tone study">
-            <img src="images/beyond-grey-2.jpg" alt="Fine liner drawing layout">
+            <!-- EDIT HERE: Drop your image files inside the misc-art folder into these paths below -->
+            <img src="misc-art/artwork1.jpg" alt="Placeholder copy for your custom artwork file asset">
+            <img src="misc-art/artwork2.jpg" alt="Placeholder copy for your custom artwork file asset">
           </div>
           <div class="slideshow-ui">
-            <div class="slide-hints">← Click image to advance →</div>
+            <div class="slide-hints">← Click media file to advance slider view →</div>
             <div class="slide-counter">1 / 2</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MODULAR ART BLOCK: OBSERVATIONAL SKETCHES -->
+    <section class="project-row">
+      <div class="project-left-col">
+        <div class="project-category"><span>✒</span> Sketchbook Folio</div>
+        
+        <!-- EDIT HERE: SKETCHBOOK DESCRIPTIONS -->
+        <div class="project-description">
+          <p>This container maps directly to your local observational folder repository. Use this block to explain your real-time nature studies, urban sketching projects, or physical prototyping process layers.</p>
+        </div>
+      </div>
+
+      <div class="project-right-col">
+        <div class="project-header-line">
+          <!-- EDIT HERE: SKETCHBOOK HEADER DETAILS -->
+          <div class="project-title">Observational Hand Drawings</div>
+          <div class="project-date">2025</div>
+        </div>
+        
+        <div class="slideshow-container">
+          <div class="slides-wrapper">
+            <!-- EDIT HERE: Drop your image files inside the observational folder into these paths below -->
+            <img src="observational/sketch1.jpg" alt="Placeholder copy for your observational sketch asset">
+          </div>
+          <div class="slideshow-ui">
+            <div class="slide-hints">← Click media file to advance slider view →</div>
+            <div class="slide-counter">1 / 1</div>
           </div>
         </div>
       </div>
@@ -562,7 +609,9 @@
       <button class="close-modal-btn" onclick="toggleModal(false)">×</button>
       <h2>Get in Touch</h2>
       <p style="font-size: 0.95rem; color:#666;">Looking forward to discussing Part 1 assistant roles and multi disciplinary collaborations.</p>
-      <form class="contact-form" action="https://formspree.io/f/mojoyovo" method="POST">
+      
+      <!-- Connect this to Formspree by inserting your unique form token string below -->
+      <form class="contact-form" action="https://formspree.io/f/YOUR_ENDPOINT_HERE" method="POST">
         <div class="form-group">
           <label for="name">Name</label>
           <input type="text" id="name" name="name" required autocomplete="off">
@@ -580,14 +629,16 @@
     </div>
   </div>
 
-  <!-- AUTOMATED DYNAMIC SLIDESHOW ENGINE -->
+  <!-- RUNTIME INTERACTIVE MECHANISMS -->
   <script>
+    // Handles the activation toggle interface for the custom form popup overlay
     function toggleModal(show) {
       const modal = document.getElementById('contactModal');
       if (show) modal.classList.add('active');
       else modal.classList.remove('active');
     }
 
+    // Handles autonomous click and swipe operations across all active layout project row streams
     document.querySelectorAll('.slideshow-container').forEach(container => {
       const wrapper = container.querySelector('.slides-wrapper');
       const slides = wrapper.querySelectorAll('img');
