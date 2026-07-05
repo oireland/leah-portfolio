@@ -1,12 +1,14 @@
 const portfolioData = {
   architecture: [
     {
-      title: "Canopies of the City",
-      category: "<span>⚙</span> Final Year Project",
+      title: "The Canopies of the City",
+      category: "<span>🎓</span> Final BA (Hons) Architecture Project",
       date: "2026",
       description: [
-        "An urban neuroarchitecture exploration establishing responsive architectural frameworks that promote neurological recovery. The design replaces rigid configurations with lightweight, undulating timber structural grids imitating natural microclimates.",
-        "By blending delicate fine-liner tracing into real tectonic model fabrication frameworks, the study highlights deep light transitions that stimulate spatial curiosity and comfort within sterile metropolitan settings."
+        "A Fine Arts University Campus that explores how neuroarchitecture can enhance wellbeing, creativity and community through an immersive relationship with nature. Inspired by the experience of walking beneath a woodland canopy, the campus is designed to provide continuous visual connection with its surroundings, creating carefully framed views in every direction to encourage inspiration and reflection.",
+        "A corten steel roof, reminiscent of autumn leaves, establishes a distinctive architectural identity, while a series of canopy structures, wrapping balconies and planted terraces extend creative learning beyond the classroom. Highly transparent buildings blur the boundary between inside and outside, with larch cladding and climbing vegetation providing natural shading while maintaining visual openness.",
+        "Existing trees are retained and complemented by diverse woodland planting, including seasonal cherry blossom, enhancing biodiversity and creating a rich sensory landscape that evolves throughout the year.",
+        "At the heart of the campus, a branching atrium carries the woodland concept indoors, creating a central social space that encourages movement, collaboration and connection across the university."
       ],
       images: [
         { src: "portfolio-images/final-year/final-year-section.jpeg", alt: "Spatial elevation rendering layer" },
@@ -21,12 +23,12 @@ const portfolioData = {
       ]
     },
     {
-      title: "Fuji Kindergarten Adaptations",
-      category: "<span>🏫</span> Case Study & Adaptation",
+      title: "Precedent Studies",
+      category: "<span>🏫</span> Fuji Kindergarten - Tokyo, Japan",
       date: "2025",
       description: [
-        "An organic layout analysis observing spatial thresholds and physical configuration patterns within famous circular school layouts. Investigating boundary transformations around mature trees to inspire collaborative child development environments.",
-        "The sequence maps active master plans alongside atmospheric cross sections, comparing seasonal changes across spring, autumn, and winter conditions via custom environmental renders."
+        "This precedent study examined how architectural design can support creativity, learning and wellbeing through movement, flexibility and a strong connection with nature. Through analytical drawings, physical modelling and visualisations, I explored the building's circular form, open learning environments and integration of existing trees, developing a deeper understanding of how thoughtful spatial design can positively influence behaviour and community."
+        
       ],
       images: [
         { src: "portfolio-images/fuji-kindergarten/fuji-kindergarten.jpg", alt: "Fuji Kindergarten exterior courtyard view" },
@@ -38,12 +40,11 @@ const portfolioData = {
       ]
     },
     {
-      title: "Urban Art Blocks",
-      category: "<span>🧱</span> Year 2 Studio",
+      title: "The Urban Art Blocks",
+      category: "Year 2",
       date: "2025",
       description: [
-        "A modular studio complex investigating sustainable heavy-mass components. The composition matches layered rammed earth against tinted cast structural blocks to contextually anchor community art workshops within their environment.",
-        "Circulation traces separate circular cells linked through lightweight aerial bridges, promoting continuous human flow and creative interaction."
+        "A proposal for a primary school Arts learning extension that encourages creativity through collaboration and a close relationship with nature. Circular rammed earth buildings are arranged around existing trees to create flexible teaching spaces, outdoor terraces and accessible walkways. The design explores how natural materials, movement and landscape integration can create inspiring educational environments while strengthening connections between people and the surrounding environment."
       ],
       images: [
         { src: "portfolio-images/year2/IMG_0356.JPEG", alt: "Rammed earth site master plan and technical section" },
@@ -55,8 +56,8 @@ const portfolioData = {
       ]
     },
     {
-      title: "Studio Foundations",
-      category: "<span>📐</span> Year 1 Studio",
+      title: "The Peace Pavilion",
+      category: "Year 1",
       date: "2024",
       description: [
         "Early academic explorations targeting precise scale, human movement metrics, and timber tectonic joinery. The investigations explore micro-pavilions and tranquil landscape interventions.",
@@ -74,8 +75,8 @@ const portfolioData = {
   ],
   art: [
     {
-      title: "Beyond Grey Explorations",
-      category: "<span>🎨</span> Fine Art Work",
+      title: "Art & Illustrations",
+      category: "<span>🎨</span> A look into my sketchbook.",
       date: "2026",
       description: [
         "A sequence of active graphite and dynamic ink studies looking beyond sterile greyscale architecture. These explorations examine anatomy, dynamic wildlife form, and organic movement patterns to challenge corporate uniformity.",
@@ -100,8 +101,7 @@ const portfolioData = {
       category: "<span>✏️</span> Field & Form Studies",
       date: "2024–2026",
       description: [
-        "A massive collection of rapid pen architectural field observations logging landmark classical facades, historic public squares, and complex curvilinear deconstructivist assemblies.",
-        "These studies track direct structural scale, shadow boundaries, and urban density variations across notable design capitals, feeding straight into Leah's spatial workflow."
+        "A collection of rapid pen architectural field observations."
       ],
       images: [
         { src: "portfolio-images/architectural-observations/IMG_6157.JPEG", alt: "Interior concrete hollow columns and dynamic elevator capsule tracing" },
