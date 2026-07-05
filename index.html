@@ -217,6 +217,7 @@
     .project-header-line {
       display: flex;
       justify-content: space-between;
+      align-items: baseline;
       font-size: 1.1rem;
       font-weight: bold;
       margin-bottom: 2rem;
@@ -227,6 +228,7 @@
       font-family: "Apple Chancery", "Brush Script MT", "Segoe Script", cursive;
       color: #800020; /* Burgundy */
       font-weight: normal;
+      font-size: 2.2rem; /* Increased size on desktop */
     }
 
     /* --- SLIDESHOW MECHANISM --- */
@@ -467,12 +469,17 @@
 
       .project-title {
         order: 1;
-        font-size: 1.8rem;
-        font-weight: normal; /* Override 800 bold for clean cursive shape */
+        font-size: 2.6rem; /* Substantially larger title layout on mobile screens */
+        font-weight: normal; 
         line-height: 1.2;
         margin-bottom: 1rem;
         text-align: left;
         width: 100%;
+      }
+
+      /* Forces wide images to snap to the top margin instead of center alignment */
+      .slides-wrapper img {
+        object-position: top center;
       }
 
       .slideshow-container {
