@@ -14,7 +14,7 @@
     
     body {
       background-color: #fbfaf7; 
-      color: #222222;
+      color: #4a3225; /* Dark brown */
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
       margin: 0;
       padding: 0;
@@ -24,7 +24,7 @@
     }
 
     a {
-      color: #222222;
+      color: #4a3225; /* Dark brown */
       text-decoration: none;
       transition: opacity 0.2s ease;
     }
@@ -74,7 +74,7 @@
     .header-cta button {
       background: none;
       border: none;
-      color: #222222;
+      color: #4a3225; /* Dark brown */
       font-family: inherit;
       font-size: 1rem;
       font-weight: 500;
@@ -114,14 +114,14 @@
     }
 
     .hero-name {
+      font-family: "Apple Chancery", "Brush Script MT", "Segoe Script", cursive;
+      color: #800020; /* Burgundy */
       font-size: clamp(4rem, 8vw, 7rem);
-      font-weight: 900;
-      font-style: italic;
-      line-height: 0.85;
-      letter-spacing: -0.04em;
+      font-weight: normal;
+      line-height: 1.1;
+      letter-spacing: normal;
       text-transform: none;
       margin: 0 0 2.5rem 0;
-      color: #222222;
     }
 
     .hero-credentials {
@@ -151,11 +151,13 @@
     }
 
     .section-intro-title {
+      font-family: "Apple Chancery", "Brush Script MT", "Segoe Script", cursive;
+      color: #800020; /* Burgundy */
       font-size: clamp(3rem, 5vw, 4.5rem);
-      font-weight: 900;
-      letter-spacing: -0.03em;
+      font-weight: normal;
+      letter-spacing: normal;
       margin: 0 0 1rem 0;
-      line-height: 1;
+      line-height: 1.2;
       display: inline-block;
     }
 
@@ -163,7 +165,7 @@
       font-size: 1.35rem;
       font-weight: 500;
       margin: 0 0 2rem 0;
-      color: #222222;
+      color: #4a3225; /* Dark brown */
     }
 
     .section-divider {
@@ -200,7 +202,7 @@
     .project-description {
       font-size: 1.05rem;
       line-height: 1.4;
-      color: #222222;
+      color: #4a3225; /* Dark brown */
     }
     
     .project-description p {
@@ -219,6 +221,12 @@
       font-weight: bold;
       margin-bottom: 2rem;
       width: 100%;
+    }
+
+    .project-title {
+      font-family: "Apple Chancery", "Brush Script MT", "Segoe Script", cursive;
+      color: #800020; /* Burgundy */
+      font-weight: normal;
     }
 
     /* --- SLIDESHOW MECHANISM --- */
@@ -259,7 +267,7 @@
       font-family: inherit;
       font-size: 1.1rem;
       font-weight: bold;
-      color: #222222;
+      color: #4a3225; /* Dark brown */
       cursor: pointer;
       padding: 0.2rem 0.6rem;
       transition: opacity 0.2s;
@@ -302,6 +310,12 @@
       position: relative;
     }
 
+    .modal-content h2 {
+      font-family: "Apple Chancery", "Brush Script MT", "Segoe Script", cursive;
+      color: #800020; /* Burgundy */
+      font-weight: normal;
+    }
+
     .close-modal-btn {
       position: absolute;
       top: 0;
@@ -333,11 +347,11 @@
     .form-group input, .form-group textarea {
       background: transparent;
       border: none;
-      border-bottom: 1px solid #222222;
+      border-bottom: 1px solid #4a3225; /* Dark brown */
       padding: 0.5rem 0;
       font-family: inherit;
       font-size: 1rem;
-      color: #222222;
+      color: #4a3225; /* Dark brown */
       outline: none;
     }
 
@@ -347,7 +361,7 @@
     }
 
     .submit-btn {
-      background: #222222;
+      background: #4a3225; /* Dark brown */
       color: #fbfaf7;
       border: none;
       padding: 0.8rem;
@@ -370,8 +384,10 @@
     }
 
     footer h3 {
+      font-family: "Apple Chancery", "Brush Script MT", "Segoe Script", cursive;
+      color: #800020; /* Burgundy */
       font-size: 1.1rem;
-      font-weight: bold;
+      font-weight: normal;
       margin-top: 0;
       margin-bottom: 1rem;
     }
@@ -393,7 +409,7 @@
     }
 
     .footer-links a:hover {
-      border-bottom: 1px solid #222222;
+      border-bottom: 1px solid #4a3225; /* Dark brown */
       opacity: 1;
     }
 
@@ -452,7 +468,7 @@
       .project-title {
         order: 1;
         font-size: 1.8rem;
-        font-weight: 800;
+        font-weight: normal; /* Override 800 bold for clean cursive shape */
         line-height: 1.2;
         margin-bottom: 1rem;
         text-align: left;
@@ -546,7 +562,7 @@
 
     <div id="art-projects"></div>
 
-<footer>
+    <footer>
       <div class="footer-col">
         <h3>Connect</h3>
         <p>Based in the UK<br>Actively seeking Part 1, design and project management roles</p>
